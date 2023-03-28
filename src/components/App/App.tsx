@@ -11,11 +11,11 @@ const App = () => {
   return (
     <div className="App">
       <Banner />
-      <div>
+      <div className='d-flex'>
         <BeerList />
         <BeerDetails />
-        <Cart />
       </div>
+      <Cart />
     </div>
   );
 }
