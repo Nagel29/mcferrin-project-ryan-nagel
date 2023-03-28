@@ -40,9 +40,9 @@ const BeerDetails = ({ beerDetails }: { beerDetails: Beer | undefined }) => {
       />
       <div className="d-flex flex-column text-start m-4 w-75">
         <h1>{beerDetails?.name}</h1>
-        <p>{beerDetails?.description}</p>
-        <p>ABV: {beerDetails?.abv}</p>
-        <p>IBU: {beerDetails?.ibu}</p>
+        <p className='card p-2'>{beerDetails?.description}</p>
+        <p className='fw-bold'>ABV: <span className='fw-normal'>{beerDetails?.abv}</span></p>
+        <p className='fw-bold'>IBU: <span className='fw-normal'>{beerDetails?.ibu}</span></p>
         <p className="mt-2 fw-bold">
           Malt used: <span className="fw-normal">{maltStrings}</span>
         </p>
