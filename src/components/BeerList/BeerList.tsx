@@ -15,13 +15,17 @@ const BeerList = () => {
     getBeers("")
   }, [])
 
-  const beerCards = beers.map(beer => {
+  const beerCards = beers.map((beer) => {
     return <BeerCard beer={beer} />
   })
 
+  // const beerRows = beerCards.reduce((acc, beer, index) => {
+  //   let row = `<div class="row"></div>`
+  //   return acc
+  // }, [])
+
   return (
-    <div className="beerList-container border">
-      beer list
+    <div className="beerList-container border rounded d-grid overflow-auto" style={{gridTemplateColumns: 'auto auto auto auto'}}>
       {beerCards}
     </div>
   )

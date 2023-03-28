@@ -1,0 +1,9 @@
+.beerCard-container {
+  max-width: 15rem;
+  max-height: 30rem;
+}
+
+.beer-img {
+  max-height: 65%;
+  overflow: hidden;
+}

@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Banner />
-      <div className='d-flex'>
+      <div className='d-flex mx-2' style={{height: '60rem'}}>
         <BeerList />
         <BeerDetails />
       </div>

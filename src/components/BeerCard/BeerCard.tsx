@@ -1,7 +1,20 @@
 import { Beer } from "../../utilities/interfaces"
+import './BeerCard.css'
 
 const BeerCard = ({ beer }: { beer: Beer }) => {
-  return <div>{beer.name}</div>
+  return (
+    <div
+      className="beerCard-container card d-flex flex-column align-items-center m-3 bg-light"
+    >
+      <div className="card-body p-1">
+        <h5 className='card-title'>{beer.name}</h5>
+        <div>{beer.tagline}</div>
+        
+      </div>
+      <img src={beer["image_url"]} className="beer-img img-fluid my-2"/>
+      <div className='border-top my-2'>ABV: {beer.abv}</div>
+    </div>
+  )
 }
 
 export default BeerCard
