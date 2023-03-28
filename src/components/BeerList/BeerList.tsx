@@ -2,8 +2,13 @@ import "./BeerList.css"
 import { useState, useEffect } from "react"
 import { fetchBeers } from "../../utilities/apiCalls"
 import BeerCard from "../BeerCard/BeerCard"
+import { Beer } from "../../utilities/interfaces"
 
-const BeerList = () => {
+const BeerList = ({
+  updateBeerDetails,
+}: {
+  updateBeerDetails: (beer: Beer) => void
+}) => {
   const [beers, setBeers] = useState([])
 
   const getBeers = async (searchParam: string) => {
@@ -16,16 +21,11 @@ const BeerList = () => {
   }, [])
 
   const beerCards = beers.map((beer) => {
-    return <BeerCard beer={beer} />
+    return <BeerCard beer={beer} updateBeerDetails={updateBeerDetails}/>
   })
 
-  // const beerRows = beerCards.reduce((acc, beer, index) => {
-  //   let row = `<div class="row"></div>`
-  //   return acc
-  // }, [])
-
   return (
-    <div className="beerList-container border rounded d-grid overflow-auto" style={{gridTemplateColumns: 'auto auto auto auto'}}>
+    <div className="beerList-container border rounded d-grid overflow-auto bg-light">
       {beerCards}
     </div>
   )
