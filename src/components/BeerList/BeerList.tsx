@@ -1,5 +1,8 @@
 const BeerList = () => {
-  return(<div>beer list</div>)
+  return(
+  <div>
+    beer list
+  </div>)
 }
 
 export default BeerList
