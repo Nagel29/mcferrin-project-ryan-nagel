@@ -1,0 +1,14 @@
+.beerCard-container {
+  max-width: 15rem;
+  max-height: 30rem;
+}
+
+.beerCard-container:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.beer-img {
+  max-height: 65%;
+  overflow: hidden;
+}
