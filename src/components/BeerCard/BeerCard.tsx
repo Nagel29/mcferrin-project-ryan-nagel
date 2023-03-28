@@ -1,5 +1,7 @@
-const BeerCard = ({beer}:{beer: any}) => {
-  return(<div>{beer.name}</div>)
+import { Beer } from "../../utilities/interfaces"
+
+const BeerCard = ({ beer }: { beer: Beer }) => {
+  return <div>{beer.name}</div>
 }
 
 export default BeerCard
