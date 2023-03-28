@@ -25,7 +25,7 @@ const BeerList = ({
   })
 
   return (
-    <div className="beerList-container border rounded d-grid overflow-auto bg-light">
+    <div className="beerList-container border rounded d-grid overflow-auto">
       {beerCards}
     </div>
   )

@@ -8,9 +8,10 @@ import BeerDetails from '../BeerDetails/BeerDetails'
 import Cart from '../Cart/Cart'
 import { Beer } from '../../utilities/interfaces';
 import {useState} from 'react'
+import bubbles from '../../assets/bubbles.mp4'
 
 const App = () => {
-  const [beerDetails, setBeerDetails] = useState<Beer>()
+  const [beerDetails, setBeerDetails] = useState<Beer | undefined>()
 
   const updateBeerDetails = (beer: Beer) => {
     setBeerDetails(beer)
@@ -21,9 +22,12 @@ const App = () => {
       <Banner />
       <div className='d-flex mx-2' style={{height: '60rem'}}>
         <BeerList updateBeerDetails={updateBeerDetails}/>
-        <BeerDetails />
+        <BeerDetails beerDetails={beerDetails}/>
       </div>
       {/* <Cart /> */}
+      <video autoPlay muted loop className='video-settings'>
+        <source src={bubbles} type="video/mp4" />
+      </video>
     </div>
   );
 }

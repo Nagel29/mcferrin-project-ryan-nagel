@@ -3,3 +3,8 @@
   width: 35%;
   margin-right: 1rem;
 }
+
+.beerDetails-img {
+  width: fit-content;
+  max-height: 15rem;
+}

@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.video-settings {
+  object-fit: cover;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .55;
+  pointer-events: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
