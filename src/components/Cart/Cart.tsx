@@ -1,6 +1,5 @@
 import Modal from "react-bootstrap/Modal"
 import Button from "react-bootstrap/Button"
-import { useState } from "react"
 import { CartBeer } from "../../utilities/interfaces"
 
 const Cart = ({
@@ -29,6 +28,7 @@ const Cart = ({
         </Modal.Header>
         <Modal.Body>
           <div className="d-flex flex-column">{cartBeers}</div>
+          {cartBeers.length === 0 && <p>No beers currently in cart! Add some beers!</p>}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
