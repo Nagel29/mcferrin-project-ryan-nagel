@@ -1,11 +1,11 @@
 .beerList-container {
-  margin-top: 6rem;
-  margin-right: 1rem;
+  margin: 7rem 1rem 2rem 2rem;
   width: 65%;
   grid-template-columns: auto auto auto auto auto;
+  height: 87%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .beerList-container {
     grid-template-columns: auto auto auto auto;
   }

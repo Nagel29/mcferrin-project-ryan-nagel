@@ -1,10 +1,10 @@
 .beerDetails-container {
-  margin-top: 6rem;
+  margin: 7rem 2rem 2rem 1rem;
   width: 35%;
-  margin-right: 1rem;
+  height: 87%;
 }
 
 .beerDetails-img {
   width: fit-content;
-  max-height: 15rem;
+  max-height: 17.5rem;
 }

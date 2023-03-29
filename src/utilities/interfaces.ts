@@ -48,3 +48,7 @@ export interface AmountOrTemp {
   value: number
 }
 
+export interface CartBeer {
+  name: string
+  quantity: number
+}
