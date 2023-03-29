@@ -36,6 +36,14 @@ const App = () => {
     }
   }
 
+  const deleteFromCart = (deletedBeer: string) => {
+    console.log('beginning')
+    let updatedCart = {...cartContents}
+    delete updatedCart[deletedBeer]
+    setCartContents(updatedCart)
+    console.log('end')
+  }
+
   return (
     <div className="App">
       <Banner handleShow={handleShow} />
@@ -47,6 +55,7 @@ const App = () => {
         showCart={showCart}
         handleClose={handleClose}
         cartContents={cartContents}
+        deleteFromCart={deleteFromCart}
       />
       <video autoPlay muted loop className="video-settings">
         <source src={bubbles} type="video/mp4" />

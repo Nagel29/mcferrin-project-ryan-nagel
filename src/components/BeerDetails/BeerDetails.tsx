@@ -1,6 +1,7 @@
 import "./BeerDetails.css"
 import { Beer } from "../../utilities/interfaces"
 import { useState, useEffect } from "react"
+import sixPack from '../../assets/six-pack.gif'
 
 const BeerDetails = ({
   beerDetails,
@@ -124,11 +125,16 @@ const BeerDetails = ({
       </>
     )
   } else {
-    content = <p>Select a beer to see more details!</p>
+    content = (
+      <>
+        <img src={sixPack} />
+        <p>Select a beer to see more details!</p>
+      </>
+    )
   }
 
   return (
-    <div className="beerDetails-container d-flex flex-column rounded overflow-auto bg-light p-3">
+    <div className="beerDetails-container d-flex flex-column rounded overflow-auto bg-white p-3">
       {content}
     </div>
   )
