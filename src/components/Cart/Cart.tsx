@@ -10,21 +10,29 @@ const Cart = ({
 }: {
   showCart: boolean
   handleClose: () => void
-  cartContents: CartBeer[]
+  cartContents: CartBeer
 }) => {
+  let cartBeers = Object.keys(cartContents).map((beer) => {
+    return (
+      <div key={beer} className="d-flex justify-content-between">
+        <p>{beer}</p>
+        <p>{cartContents[beer]}x</p>
+      </div>
+    )
+  })
+
   return (
     <>
       <Modal show={showCart} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Your Cart</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <div className="d-flex flex-column">{cartBeers}</div>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>

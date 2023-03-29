@@ -1,9 +1,34 @@
 import "./BeerDetails.css"
 import { Beer } from "../../utilities/interfaces"
+import { useState, useEffect } from "react"
 
-const BeerDetails = ({ beerDetails }: { beerDetails: Beer | undefined }) => {
+const BeerDetails = ({
+  beerDetails,
+  updateCart,
+}: {
+  beerDetails: Beer | undefined
+  updateCart: (addedBeer: Beer | undefined, quantity: number) => void
+}) => {
+  const [quantity, setQuantity] = useState<number>(1)
+  const [showMessage, setShowMessage] = useState<boolean>(false)
+
+  const handleQuantity = (event: any) => {
+    if (event) {
+      setQuantity(event.target.value)
+    }
+  }
+
+  useEffect(() => {
+    setQuantity(1)
+    setShowMessage(false)
+  }, [beerDetails])
+
   const pairings = beerDetails?.["food_pairing"].map((food) => {
-    return <li key={food} className="list-group-item">{food}</li>
+    return (
+      <li key={food} className="list-group-item">
+        {food}
+      </li>
+    )
   })
 
   const maltStrings = beerDetails?.ingredients.malt.map((malt, index) => {
@@ -59,7 +84,35 @@ const BeerDetails = ({ beerDetails }: { beerDetails: Beer | undefined }) => {
         </p>
         <h6 className="mt-4 fw-bold">Pairs well with:</h6>
         <div className="list-group text-start">{pairings}</div>
-        <button className="btn btn-primary mt-5">Add to Cart</button>
+        <label className=" mt-4" htmlFor="quantity-dropdown">
+          Select a quantity:
+        </label>
+        <select
+          className="form-select form-select-sm w-50"
+          aria-label=".form-select-sm"
+          value={quantity}
+          onChange={(event) => handleQuantity(event)}
+          id="quantity-dropdown"
+        >
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+          <option value="6">Six</option>
+        </select>
+        <div className='d-flex align-items-center'>
+          <button
+            className="btn btn-primary mt-1 w-50"
+            onClick={() => {
+              updateCart(beerDetails, quantity)
+              setShowMessage(true)
+            }}
+          >
+            Add to Cart
+          </button>
+          {showMessage && (<p className='m-2'>{quantity} {beerDetails?.name} added to cart!</p>)}
+        </div>
       </div>
     </div>
   )
