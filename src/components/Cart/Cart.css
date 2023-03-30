@@ -1,0 +1,9 @@
+.remove-img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.remove-img:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}

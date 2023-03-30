@@ -20,14 +20,14 @@ const BeerList = ({
     getBeers("")
   }, [])
 
-  const beerCards = beers.map((beer) => {
-    return <BeerCard beer={beer} updateBeerDetails={updateBeerDetails}/>
+  const beerCards = beers.map((beer: Beer) => {
+    return <BeerCard key={beer.id} beer={beer} updateBeerDetails={updateBeerDetails} />
   })
 
   return (
-    <div className="beerList-container border rounded d-grid overflow-auto">
-      {beerCards}
-    </div>
+      <div className="beerList-container border rounded d-grid bg-light overflow-auto">
+        {beerCards}
+      </div>
   )
 }
 

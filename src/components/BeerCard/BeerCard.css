@@ -4,7 +4,7 @@
 }
 
 .beerCard-container:hover {
-  opacity: .85;
+  opacity: .7;
   cursor: pointer;
 }
 

@@ -7,3 +7,7 @@
   max-width: 2rem;
   margin: .5rem
 }
+
+.cart-button:hover {
+  cursor: pointer
+}
