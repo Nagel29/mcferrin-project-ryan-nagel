@@ -130,7 +130,7 @@ const BeerDetails = ({
     content = (
       <>
         <img src={sixPack} className="rounded" />
-        <p>Select a beer to see more details!</p>
+        <p className='fs-5 m-2'>Select a beer to see more details!</p>
       </>
     )
   }

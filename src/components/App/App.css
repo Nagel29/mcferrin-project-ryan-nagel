@@ -14,26 +14,6 @@
   }
 }
 
-
-/* 
-@media (max-height: 950px) {
-  .main-container {
-    height: 55rem
-  }
-}
-
-@media (max-height: 880px) {
-  .main-container {
-    height: 50rem
-  }
-}
-
-@media (max-height: 810px) {
-  .main-container {
-    height:47rem
-  }
-} */
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
