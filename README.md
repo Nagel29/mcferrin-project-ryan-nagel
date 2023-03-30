@@ -1,3 +1,14 @@
+## Summary 
+
+This is a take-home project as part of an interview process. I was given the option of two different APIs to use, and I decided to go with the ![punk API](https://punkapi.com/documentation/v2). This app meets the following requirements:
+
+1. Single page that displays beer options
+2. Simple shopping cart implementation that allows users to add beer to their cart
+3. Cart should be viewable by user
+
+I've also added the ability for the user to search beer by name and view additional details about each beer by clicking on them.
+
+
 ## Installation
 
 1. Fork and clone the repo to your local machine.
