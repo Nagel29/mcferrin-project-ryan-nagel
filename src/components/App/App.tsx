@@ -37,11 +37,9 @@ const App = () => {
   }
 
   const deleteFromCart = (deletedBeer: string) => {
-    console.log('beginning')
     let updatedCart = {...cartContents}
     delete updatedCart[deletedBeer]
     setCartContents(updatedCart)
-    console.log('end')
   }
 
   return (
