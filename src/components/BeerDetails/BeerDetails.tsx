@@ -68,12 +68,12 @@ const BeerDetails = ({
             src={beerDetails?.["image_url"]}
             className="beerDetails-img img-fluid my-2 m-3"
           />
-          <div className="d-flex flex-column text-start m-4 w-75">
+          <div className="container-fluid d-flex flex-column text-start m-4 w-75">
             <h1>{beerDetails?.name}</h1>
             <p className="card p-2">{beerDetails?.description}</p>
           </div>
         </div>
-        <div className="d-flex flex-column text-start p-4">
+        <div className="d-flex flex-column text-start p-1">
           <p className="fw-bold">
             ABV: <span className="fw-normal">{beerDetails?.abv}</span>
           </p>
@@ -134,7 +134,7 @@ const BeerDetails = ({
   }
 
   return (
-    <div className="beerDetails-container d-flex flex-column rounded overflow-auto bg-light p-3">
+    <div className="beerDetails-container overflow-auto d-flex flex-column bg-light p-3">
       {content}
     </div>
   )

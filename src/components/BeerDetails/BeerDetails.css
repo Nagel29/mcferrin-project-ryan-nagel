@@ -1,10 +1,32 @@
 .beerDetails-container {
-  margin: 7rem 2rem 2rem 1rem;
+  margin-top: 5.75rem;
   width: 35%;
-  height: 53rem;
+  height: 89%;
 }
 
 .beerDetails-img {
   width: fit-content;
   max-height: 17.5rem;
+}
+
+@media (max-width: 1200px) {
+  .beerDetails-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .beerDetails-container {
+    height: 60%;
+    width: 100%;
+    margin-top: .75rem;
+    border: rgb(201, 200, 200) 1px solid;
+    font-size: small
+  }
+}
+
+@media (max-width: 700px) {
+  .beerDetails-img {
+    height: 60%;
+  }
 }

@@ -35,7 +35,7 @@ const BeerList = ({
   return (
     <div className='search-list-container border rounded'>
       <Search getBeers={getBeers}/>
-      <div className="beerList-container d-grid bg-light overflow-auto rounded-bottom">
+      <div className="beerList-container container-fluid d-grid bg-light overflow-auto rounded-bottom">
         {beerCards}
       </div>
     </div>

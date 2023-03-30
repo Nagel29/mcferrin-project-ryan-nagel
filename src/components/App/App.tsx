@@ -8,7 +8,6 @@ import BeerDetails from "../BeerDetails/BeerDetails"
 import Cart from "../Cart/Cart"
 import { Beer, CartBeer } from "../../utilities/interfaces"
 import { useState } from "react"
-import bubbles from "../../assets/bubbles.mp4"
 
 const App = () => {
   const [beerDetails, setBeerDetails] = useState<Beer | undefined>()
@@ -45,7 +44,7 @@ const App = () => {
   return (
     <div className="App">
       <Banner handleShow={handleShow} />
-      <div className="d-flex mx-2">
+      <div className="list-details-container d-flex mx-1 h-100">
         <BeerList updateBeerDetails={updateBeerDetails} />
         <BeerDetails beerDetails={beerDetails} updateCart={updateCart} />
       </div>
@@ -55,9 +54,7 @@ const App = () => {
         cartContents={cartContents}
         deleteFromCart={deleteFromCart}
       />
-      <video autoPlay muted loop className="video-settings">
-        <source src={bubbles} type="video/mp4" />
-      </video>
+
     </div>
   )
 }
