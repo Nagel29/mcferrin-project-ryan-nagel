@@ -47,7 +47,7 @@ const App = () => {
   return (
     <div className="App">
       <Banner handleShow={handleShow} />
-      <div className="main-container d-flex mx-2">
+      <div className="d-flex mx-2">
         <BeerList updateBeerDetails={updateBeerDetails} />
         <BeerDetails beerDetails={beerDetails} updateCart={updateCart} />
       </div>

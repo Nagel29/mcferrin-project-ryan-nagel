@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { fetchBeers } from "../../utilities/apiCalls"
 import BeerCard from "../BeerCard/BeerCard"
 import { Beer } from "../../utilities/interfaces"
+import Search from '../Search/Search'
 
 const BeerList = ({
   updateBeerDetails,
@@ -10,6 +11,7 @@ const BeerList = ({
   updateBeerDetails: (beer: Beer) => void
 }) => {
   const [beers, setBeers] = useState([])
+ 
 
   const getBeers = async (searchParam: string) => {
     const beerList = await fetchBeers(searchParam)
@@ -21,13 +23,22 @@ const BeerList = ({
   }, [])
 
   const beerCards = beers.map((beer: Beer) => {
-    return <BeerCard key={beer.id} beer={beer} updateBeerDetails={updateBeerDetails} />
+    return (
+      <BeerCard
+        key={beer.id}
+        beer={beer}
+        updateBeerDetails={updateBeerDetails}
+      />
+    )
   })
 
   return (
-      <div className="beerList-container border rounded d-grid bg-light overflow-auto">
+    <div className='search-list-container border rounded'>
+      <Search getBeers={getBeers}/>
+      <div className="beerList-container d-grid bg-light overflow-auto rounded-bottom">
         {beerCards}
       </div>
+    </div>
   )
 }
 
