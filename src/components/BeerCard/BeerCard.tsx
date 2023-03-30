@@ -9,7 +9,7 @@ const BeerCard = ({
   updateBeerDetails: (beer: Beer) => void
 }) => {
   return (
-    <div className="beerCard-container card d-flex flex-column align-items-center m-3 bg-light border-success" onClick={() => updateBeerDetails(beer)}>
+    <div className="beerCard-container card d-flex flex-column align-items-center m-3 border-success" onClick={() => updateBeerDetails(beer)}>
       <div className="card-body p-1">
         <h5 className="card-title">{beer.name}</h5>
         <div>{beer.tagline}</div>

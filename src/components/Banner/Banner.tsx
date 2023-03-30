@@ -4,7 +4,7 @@ import "./Banner.css"
 
 const Banner = ({handleShow}:{handleShow: () => void}) => {
   return (
-    <nav className="navbar bg-secondary fixed-top text-white">
+    <nav className="navbar bg-light fixed-top text-dark">
       <div className="container-fluid d-flex justify-content-between align-items-end">
         <div className="d-flex align-items-end">
           <img src={sixPack} className="logo me-2" />

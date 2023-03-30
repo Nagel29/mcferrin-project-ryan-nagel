@@ -127,14 +127,14 @@ const BeerDetails = ({
   } else {
     content = (
       <>
-        <img src={sixPack} />
+        <img src={sixPack} className='rounded'/>
         <p>Select a beer to see more details!</p>
       </>
     )
   }
 
   return (
-    <div className="beerDetails-container d-flex flex-column rounded overflow-auto bg-white p-3">
+    <div className="beerDetails-container d-flex flex-column rounded overflow-auto bg-light p-3">
       {content}
     </div>
   )
