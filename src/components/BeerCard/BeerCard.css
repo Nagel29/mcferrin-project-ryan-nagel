@@ -12,3 +12,9 @@
   max-height: 65%;
   overflow: hidden;
 }
+
+@media (max-width: 700px) {
+  .beerCard-container {
+    height: 50%;
+  }
+}

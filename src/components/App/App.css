@@ -1,34 +1,16 @@
 .App {
   text-align: center;
+  position:fixed;
+  top:0px;
+  bottom: 90px;
+  left:0px;
+  right:0px;
+  height: 100%;
 }
 
-.video-settings {
-  object-fit: cover;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: .55;
-  pointer-events: none;
-}
-
-@media (max-height: 950px) {
-  .main-container {
-    height: 55rem
-  }
-}
-
-@media (max-height: 880px) {
-  .main-container {
-    height: 50rem
-  }
-}
-
-@media (max-height: 810px) {
-  .main-container {
-    height:47rem
+@media (max-width: 700px) {
+  .list-details-container {
+    flex-direction: column;
   }
 }
 
