@@ -37,17 +37,15 @@ const App = () => {
   }
 
   const deleteFromCart = (deletedBeer: string) => {
-    console.log('beginning')
     let updatedCart = {...cartContents}
     delete updatedCart[deletedBeer]
     setCartContents(updatedCart)
-    console.log('end')
   }
 
   return (
     <div className="App">
       <Banner handleShow={handleShow} />
-      <div className="main-container d-flex mx-2">
+      <div className="d-flex mx-2">
         <BeerList updateBeerDetails={updateBeerDetails} />
         <BeerDetails beerDetails={beerDetails} updateCart={updateCart} />
       </div>

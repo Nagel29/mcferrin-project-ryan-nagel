@@ -14,10 +14,6 @@
   pointer-events: none;
 }
 
-.main-container {
-  height: 60rem;
-}
-
 @media (max-height: 950px) {
   .main-container {
     height: 55rem

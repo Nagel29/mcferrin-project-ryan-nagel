@@ -10,7 +10,7 @@ const Banner = ({handleShow}:{handleShow: () => void}) => {
           <img src={sixPack} className="logo me-2" />
           <h1>Pint Picker</h1>
         </div>
-        <div className="cart-button mx-1" onClick={handleShow}>
+        <div className="cart-button mx-1 fs-4" onClick={handleShow}>
           <img src={cart} className="cart" />
           Your Cart
         </div>

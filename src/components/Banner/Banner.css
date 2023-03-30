@@ -9,5 +9,6 @@
 }
 
 .cart-button:hover {
-  cursor: pointer
+  cursor: pointer;
+  color: rgb(33, 107, 35)
 }
