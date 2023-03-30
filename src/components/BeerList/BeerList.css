@@ -1,6 +1,7 @@
 .beerList-container {
   grid-template-columns: auto auto auto auto auto;
   height: 100%;
+  padding-bottom: 6rem;
   border: rgb(201, 200, 200) 1px solid
 }
 
